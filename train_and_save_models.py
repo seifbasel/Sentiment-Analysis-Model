@@ -18,6 +18,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import nltk
 
+
 # Ensure the necessary NLTK data is downloaded
 nltk.download('punkt')
 nltk.download('stopwords')
@@ -177,4 +178,3 @@ for model_name, model in models.items():
         y_pred = model.predict(X_test_tfidf)
     cm = confusion_matrix(y_test, y_pred)
     plot_confusion_matrix(cm, labels=["Negative", "Positive"], title=f"Confusion Matrix - {model_name}")
-
